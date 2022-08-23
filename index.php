@@ -70,6 +70,49 @@
           ?>
       </li>
    </ul>
+
+   <h1>Snack-2</h1>
+   <h4>
+    <?php 
+      $name = $_GET['name'];
+      $mail = $_GET['mail'];
+      $age = $_GET['age'];
+
+      if(strlen($name) > 3 && strpos($mail, '@') > 0 && strpos($mail, '.') > 3 && is_numeric($age)){
+        echo 'Accesso riuscito';
+      } else {
+        echo 'Accesso negato';
+      }
+    ?>
+   </h4>
+
+   <h1>Snack-3</h1>
+   <h4>
+      <?php
+        $numbers = [];
+        for($counter = 0; $counter < 15; $counter++){
+          $number = rand(1,100);
+          if(!in_array($number, $numbers)){
+            $numbers[] = $number;
+          }
+        }
+        var_dump($numbers);
+      ?>
+   </h4>
+
+   <h1>Snack-4</h1>
+   <h4>
+      <?php
+         $paragraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maiores omnis nostrum totam excepturi ab iste maxime harum beatae eos. a aliquam, consectetur eaque nesciunt quos iusto enim itaque cum!
+         Omnis non tempore esse repudiandae eos, excepturi quia doloribus animi quasi eius itaque dolorum officiis laboriosam optio hic. Reiciendis, quasi quas non ea sequi doloremque. esse aut temporibus repellat dicta.';
+
+         $newparagraph = explode('.', $paragraph);
+
+         for($c = 0; $c < count($newparagraph); $c++){
+          var_dump($newparagraph[$c]);
+         }
+      ?>
+   </h4>
   
    <h1>Snack-7</h1>
    <h4>
