@@ -142,11 +142,10 @@
       <li>
           <?php 
             echo $pupils[$index]['name'] . ' ' . $pupils[$index]['surname'];
-            var_dump($pupils[$index]['vote']);
             $sum = array_sum($pupils[$index]['vote']);
             $media = $sum / count($pupils[$index]['vote']);
             $format_media = number_format($media, 2);
-            echo 'La media voti di:' . ' ' . $pupils[$index]['name'] . ' ' . $pupils[$index]['surname'] . ' ' . ' é di: ' . ' ' . $format_media;
+            echo ', media voti:' . ' ' . $format_media;
           }
           ?>
       </li>
