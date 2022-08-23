@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <h1> Snack-1
+  <h1> Snack-1</h1>
     <h4>
       <?php
           $arraybaskets = [
@@ -69,11 +69,88 @@
           }
           ?>
       </li>
-
-        
+   </ul>
   
-    </ul>
-  </h1>
+   <h1>Snack-7</h1>
+   <h4>
+    <?php 
+      $pupils = [
+        [
+          'name' => 'Christian',
+          'surname' => 'DeSica',
+          'vote' => [
+            'Storia' => 7,
+            'Latino' => 5,
+            'Italiano' => 6,
+            'Matematica' => 4,
+          ]
+        ],
+
+        [
+          'name' => 'Massimo',
+          'surname' => 'Boldi',
+          'vote' => [
+            'Storia' => 4,
+            'Latino' => 5,
+            'Italiano' => 7,
+            'Matematica' => 6.5,
+          ]
+        ],
+
+        [
+          'name' => 'Vins',
+          'surname' => 'DeLongo',
+          'vote' => [
+            'Storia' => 8,
+            'Latino' => 4,
+            'Italiano' => 6.5,
+            'Matematica' => 4.5,
+          ]
+        ],
+
+        [
+          'name' => 'Raoul',
+          'surname' => 'Costantini',
+          'vote' => [
+            'Storia' => 4.5,
+            'Latino' => 5.5,
+            'Italiano' => 6,
+            'Matematica' => 5.5,
+          ]
+        ],
+
+        [
+          'name' => 'Massimo',
+          'surname' => 'Ghini',
+          'vote' => [
+            'Storia' => 7,
+            'Latino' => 7.5,
+            'Italiano' => 6.5,
+            'Matematica' => 8,
+          ]
+        ],
+      ];
+
+      $sum = 0;
+      $media = 0;
+    ?>
+   </h4>
+   <ul>
+      <?php
+        for($index = 0; $index < count($pupils); $index++){
+      ?>
+      <li>
+          <?php 
+            echo $pupils[$index]['name'] . ' ' . $pupils[$index]['surname'];
+            var_dump($pupils[$index]['vote']);
+            $sum = array_sum($pupils[$index]['vote']);
+            $media = $sum / count($pupils[$index]['vote']);
+            $format_media = number_format($media, 2);
+            echo 'La media voti di:' . ' ' . $pupils[$index]['name'] . ' ' . $pupils[$index]['surname'] . ' ' . ' é di: ' . ' ' . $format_media;
+          }
+          ?>
+      </li>
+   </ul>
 </body>
 
 </html>
